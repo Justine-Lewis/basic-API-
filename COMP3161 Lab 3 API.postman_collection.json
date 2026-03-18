@@ -1,0 +1,222 @@
+{
+  "info": {
+    "_postman_id": "27cdc6fb-6870-4e6d-a142-743d8c1f415a",
+    "name": "COMP3161 Lab 3 API",
+    "description": "### Welcome to Postman! This is your first collection.\n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests  \n• Test your API in real-world scenarios  \n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53221732",
+    "_collection_link": "https://go.postman.co/collection/53221732-27cdc6fb-6870-4e6d-a142-743d8c1f415a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All Customers",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/customers",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Customer by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/customer/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "customer",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Customer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"CustomerID\": 2001,\r\n  \"Gender\": \"Female\",\r\n  \"Age\": 25,\r\n  \"AnnualIncome\": 50000,\r\n  \"SpendingScore\": 70,\r\n  \"Profession\": \"Engineer\",\r\n  \"WorkExperience\": 3,\r\n  \"FamilySize\": 4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/add_customer",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "add_customer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Profession",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"Profession\": \"Healthcare\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/update_profession/2001",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "update_profession",
+            "2001"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Highest Income Report",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/highest_income_report",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "highest_income_report"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Total Income Report",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/total_income_report",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "total_income_report"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Average Work Experience",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/average_work_experience",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "average_work_experience"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Average Spending Score By Profession",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/average_spending_score/Lawyer",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "average_spending_score",
+            "Lawyer"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
